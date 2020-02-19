@@ -4,10 +4,6 @@ WORKDIR /home/uchiumi
 
 # noniteractive
 ENV DEBIAN_FRONTEND=noninteractive
-# Language
-ENV LANG ja_JP.UTF-8
-ENV LANGUAGE ja_JP:ja
-ENV LC_ALL ja_JP.UTF-8
 # Time zone
 ENV TZ=Asia/Tokyo 
 
@@ -48,8 +44,7 @@ RUN apt-get install -y python3 python3-pip
 # pipインストール(最新版)
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3 get-pip.py
-RUN pip3 -V
-RUN pip -V
+RUN rm get-pip.py
 
 # pip install
 COPY requirements.txt ${PWD}
