@@ -1,3 +1,4 @@
+# FROM nvidia/cuda
 FROM ubuntu:latest
 USER root
 WORKDIR /home/uchiumi
