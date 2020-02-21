@@ -1,4 +1,4 @@
-# hoge
+# gcp-sample code
 
 ```bash
 # Build docker image from Dockerfile
